@@ -145,6 +145,187 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/4166601289/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="HanaSaki">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洛斯里克的苍蓝星">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/4166601289/" class="post-title-link" itemprop="url">设计模式2-工厂模式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-03-09 11:45:32 / 修改时间：11:45:36" itemprop="dateCreated datePublished" datetime="2023-03-09T11:45:32+08:00">2023-03-09</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          什么是工厂模式
+它提供了一种创建对象的最佳方式。在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。实现了创建者和调用者分离，工厂模式分为简单工厂、工厂方法、抽象工厂模式
+
+工厂模式好处
+工厂模式是我们最常用的实例化对象模式了，是用工厂方法代替new操作的一种模式。
+利用工厂模式可以降低程序的耦合性，为后期的维护修改提供了很大的便利。
+将选择实现类、创建对象统一管理和控制。从而将调用者跟我们的实现类解耦。
+
+为什么要学习工厂设计模式
+不知道你们面试题问到过源码没有，你知道Spring的源码吗，MyBatis的源码吗，等等等 如果你想学习很多框
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/4166601289/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/555810015/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="HanaSaki">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洛斯里克的苍蓝星">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/555810015/" class="post-title-link" itemprop="url">设计模式1-单例模式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-03-09 11:45:14 / 修改时间：11:45:20" itemprop="dateCreated datePublished" datetime="2023-03-09T11:45:14+08:00">2023-03-09</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>809</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          单例模式
+定义
+单例模式属于创建型模式，它提供了一种创建对象的最佳方式。
+
+这种模式涉及到一个单一的类，该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一的对象的方式，可以直接访问，不需要实例化该类的对象。
+
+优缺点
+优点
+
+ * 在单例模式中，活动的单例只有一个实例，对单例类的所有实例化得到的都是相同的一个实例。这样就防止其它对象对自己的实例化，确保所有的对象都访问一个实例
+ * 单例模式具有一定的伸缩性，类自己来控制实例化进程，类就在改变实例化进程上有相应的伸缩性。
+ * 提供了对唯一实例的受控访问。
+ * 由于在系统内存中只存在一个对象，因此可以节约系统资源，
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/555810015/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/3135679864/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -581,7 +762,7 @@ git checkout master xxx.txt 将xxx.txt恢复成master分支的状态
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-03-09 11:35:49 / 修改时间：11:35:55" itemprop="dateCreated datePublished" datetime="2023-03-09T11:35:49+08:00">2023-03-09</time>
+              <time title="创建时间：2023-03-09 11:35:49 / 修改时间：11:47:01" itemprop="dateCreated datePublished" datetime="2023-03-09T11:35:49+08:00">2023-03-09</time>
             </span>
 
           <br>
@@ -590,7 +771,7 @@ git checkout master xxx.txt 将xxx.txt恢复成master分支的状态
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>6</span>
+              <span>4</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -661,7 +842,7 @@ git checkout master xxx.txt 将xxx.txt恢复成master分支的状态
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-03-09 11:34:30 / 修改时间：11:35:44" itemprop="dateCreated datePublished" datetime="2023-03-09T11:34:30+08:00">2023-03-09</time>
+              <time title="创建时间：2023-03-09 11:34:30 / 修改时间：11:46:40" itemprop="dateCreated datePublished" datetime="2023-03-09T11:34:30+08:00">2023-03-09</time>
             </span>
 
           <br>
@@ -670,7 +851,7 @@ git checkout master xxx.txt 将xxx.txt恢复成master分支的状态
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>836</span>
+              <span>834</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -1002,237 +1183,6 @@ CLASS_PATH=.
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2164724711/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="HanaSaki">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洛斯里克的苍蓝星">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2164724711/" class="post-title-link" itemprop="url">批处理备份文件加时间戳</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-09 10:47:35 / 修改时间：11:30:39" itemprop="dateCreated datePublished" datetime="2023-03-09T10:47:35+08:00">2023-03-09</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>174</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          输出时间戳
-
-1
-
-
-echo %date%
-
-
-
-可以通过结合~和,来实现分割
-
-1
-
-
-echo %date:~0,4%
-
-
-
-上面的代码表示从0开始，输出4个字符
-因此再加上time可以输出当前时间戳
-
-1
-
-
-echo %date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%
-
-
-
-由于小时在12点前不会输出两位，因此可以用下面这段补齐前导零
-
-1
-2
-
-
-set hh=%time:~0,2%
-if /i %hh% LSS 10 (set hh=0%time:~1,1%)
-
-
-再加上复制文件的命令，就可以了
-
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2164724711/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/345342698/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="HanaSaki">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洛斯里克的苍蓝星">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/345342698/" class="post-title-link" itemprop="url">Centos 7 安装docker</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-09 10:47:04 / 修改时间：10:47:16" itemprop="dateCreated datePublished" datetime="2023-03-09T10:47:04+08:00">2023-03-09</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>137</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          安装
-
-1、升级yum 
-
-1
-
-
-sudo yum update
-
-
-2、安装依赖
-
-1
-
-
-sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-
-
-3、卸载旧版本
-
-1
-
-
-sudo yum remove docker  docker-common docker-selinux docker-engine
-
-
-4、添加阿里云docker-ce源
-
-1
-
-
-sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/345342698/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1302,7 +1252,7 @@ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
