@@ -145,6 +145,92 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/1931467793/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="HanaSaki">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="洛斯里克的苍蓝星">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/1931467793/" class="post-title-link" itemprop="url">Centos安装java11</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-03-09 11:33:34" itemprop="dateCreated datePublished" datetime="2023-03-09T11:33:34+08:00">2023-03-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-03-15 14:12:23" itemprop="dateModified" datetime="2023-03-15T14:12:23+08:00">2023-03-15</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>165</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Centos安装java11</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/1931467793/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/posts/2164724711/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -176,7 +262,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-10 10:16:19" itemprop="dateModified" datetime="2023-03-10T10:16:19+08:00">2023-03-10</time>
+                <time title="修改时间：2023-03-15 14:11:41" itemprop="dateModified" datetime="2023-03-15T14:11:41+08:00">2023-03-15</time>
               </span>
 
           <br>
@@ -204,50 +290,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          输出时间戳
-
-1
-
-
-echo %date%
-
-
-
-可以通过结合~和,来实现分割
-
-1
-
-
-echo %date:~0,4%
-
-
-
-上面的代码表示从0开始，输出4个字符
-因此再加上time可以输出当前时间戳
-
-1
-
-
-echo %date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%
-
-
-
-由于小时在12点前不会输出两位，因此可以用下面这段补齐前导零
-
-1
-2
-
-
-set hh=%time:~0,2%
-if /i %hh% LSS 10 (set hh=0%time:~1,1%)
-
-
-再加上复制文件的命令，就可以了
-
-
+          <p>批处理备份文件加时间戳</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/posts/2164724711/#more" rel="contents">
+              <a class="btn" href="/posts/2164724711/">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -294,10 +340,16 @@ if /i %hh% LSS 10 (set hh=0%time:~1,1%)
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-03-09 10:47:04 / 修改时间：10:47:16" itemprop="dateCreated datePublished" datetime="2023-03-09T10:47:04+08:00">2023-03-09</time>
+              <time title="创建时间：2023-03-09 10:47:04" itemprop="dateCreated datePublished" datetime="2023-03-09T10:47:04+08:00">2023-03-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-03-15 14:12:11" itemprop="dateModified" datetime="2023-03-15T14:12:11+08:00">2023-03-15</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -324,41 +376,10 @@ if /i %hh% LSS 10 (set hh=0%time:~1,1%)
     <div class="post-body" itemprop="articleBody">
 
       
-          安装
-
-1、升级yum 
-
-1
-
-
-sudo yum update
-
-
-2、安装依赖
-
-1
-
-
-sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-
-
-3、卸载旧版本
-
-1
-
-
-sudo yum remove docker  docker-common docker-selinux docker-engine
-
-
-4、添加阿里云docker-ce源
-
-1
-
-
-sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
+          <p>Centos 7 安装docker</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/posts/345342698/#more" rel="contents">
+              <a class="btn" href="/posts/345342698/">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -405,10 +426,16 @@ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-03-09 10:45:26 / 修改时间：10:45:39" itemprop="dateCreated datePublished" datetime="2023-03-09T10:45:26+08:00">2023-03-09</time>
+              <time title="创建时间：2023-03-09 10:45:26" itemprop="dateCreated datePublished" datetime="2023-03-09T10:45:26+08:00">2023-03-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-03-15 14:11:58" itemprop="dateModified" datetime="2023-03-15T14:11:58+08:00">2023-03-15</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -435,12 +462,10 @@ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
     <div class="post-body" itemprop="articleBody">
 
       
-          网易mumu安卓模拟器采用的是x86架构的android，这种环境下arm下的tcpdump无法工作，因此需要自己编译tcpdump，教程
-
-编译的成品，下载
+          <p>Android_x86下的tcpdump</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/posts/1522248579/#more" rel="contents">
+              <a class="btn" href="/posts/1522248579/">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -487,10 +512,16 @@ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-03-09 10:44:02 / 修改时间：10:44:47" itemprop="dateCreated datePublished" datetime="2023-03-09T10:44:02+08:00">2023-03-09</time>
+              <time title="创建时间：2023-03-09 10:44:02" itemprop="dateCreated datePublished" datetime="2023-03-09T10:44:02+08:00">2023-03-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-03-15 12:00:59" itemprop="dateModified" datetime="2023-03-15T12:00:59+08:00">2023-03-15</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -517,33 +548,10 @@ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
     <div class="post-body" itemprop="articleBody">
 
       
-          定时任务
-Linux crontab定时任务
-
-定时任务配置
-
-crontab -e //配置当前用户的定时任务
-
-cron表达式在线
-
-常见问题
-定时任务运行脚本时载入环境变量
-在脚本开头加上
-
-1
-2
-
-
-source ~/.bash_profile
-source /etc/profile
-
-
-定时任务时区问题
-最好直接修改linux时区
-使用date命令查看当前时间
+          <p>Linux定时任务</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/posts/2711669357/#more" rel="contents">
+              <a class="btn" href="/posts/2711669357/">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -598,7 +606,7 @@ source /etc/profile
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-10 10:15:20" itemprop="dateModified" datetime="2023-03-10T10:15:20+08:00">2023-03-10</time>
+                <time title="修改时间：2023-03-15 14:11:17" itemprop="dateModified" datetime="2023-03-15T14:11:17+08:00">2023-03-15</time>
               </span>
 
           <br>
@@ -626,27 +634,10 @@ source /etc/profile
     <div class="post-body" itemprop="articleBody">
 
       
-          记录下各种软件的安装指南
-以及环境变量相关的配置
-
-MySQL
-MySQL8.0-Linux
-错误1
-
-Access denied for user ‘root‘@’localhost’ (using password: YES)
-
-密码错误，可能是之前mysql配置没删干净，导致密码生成的log没出现
-
-解决方法
-在[mysqld]后添加skip-grant-tables
-进入mysql后flush privileges;
-然后修改密码ALTER USER ‘root‘@’localhost’ IDENTIFIED BY ‘XXXX’;
-
-错误 2
-MySQL安装报错：Couldn‘t op
+          <p>记录下各种软件的安装指南</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/posts/3012024049/#more" rel="contents">
+              <a class="btn" href="/posts/3012024049/">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -733,108 +724,6 @@ MySQL安装报错：Couldn‘t op
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/3198486155/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/posts/1243066710/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="HanaSaki">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="洛斯里克的苍蓝星">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/1243066710/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-03-08 10:36:42" itemprop="dateCreated datePublished" datetime="2023-03-08T10:36:42+08:00">2023-03-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-09 10:33:46" itemprop="dateModified" datetime="2023-03-09T10:33:46+08:00">2023-03-09</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>78</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-
-Quick Start
-Create a new post
-1
-
-
-$ hexo new "My New Post"
-
-
-More info: Writing
-
-Run server
-1
-
-
-$ hexo s
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/1243066710/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

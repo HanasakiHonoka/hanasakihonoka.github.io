@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="JS脚本开发小结">
+  <meta name="description" content="Guava cache">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS脚本开发小结">
-<meta property="og:url" content="http://example.com/posts/3500725125/index.html">
+<meta property="og:title" content="Guava cache">
+<meta property="og:url" content="http://example.com/posts/146481201/index.html">
 <meta property="og:site_name" content="洛斯里克的苍蓝星">
-<meta property="og:description" content="JS脚本开发小结">
+<meta property="og:description" content="Guava cache">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-09T03:38:18.000Z">
-<meta property="article:modified_time" content="2023-03-15T06:17:26.783Z">
+<meta property="article:published_time" content="2023-05-25T01:25:17.000Z">
+<meta property="article:modified_time" content="2023-05-25T01:26:05.727Z">
 <meta property="article:author" content="HanaSaki">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/posts/3500725125/">
+<link rel="canonical" href="http://example.com/posts/146481201/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>JS脚本开发小结 | 洛斯里克的苍蓝星</title>
+  <title>Guava cache | 洛斯里克的苍蓝星</title>
   
 
 
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/posts/3500725125/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/146481201/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          JS脚本开发小结
+          Guava cache
         </h1>
 
         <div class="post-meta">
@@ -172,16 +172,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-03-09 11:38:18" itemprop="dateCreated datePublished" datetime="2023-03-09T11:38:18+08:00">2023-03-09</time>
+              <time title="创建时间：2023-05-25 09:25:17 / 修改时间：09:26:05" itemprop="dateCreated datePublished" datetime="2023-05-25T09:25:17+08:00">2023-05-25</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-15 14:17:26" itemprop="dateModified" datetime="2023-03-15T14:17:26+08:00">2023-03-15</time>
-              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -189,7 +183,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>177</span>
+              <span>145</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -198,7 +192,7 @@
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               <span>1 分钟</span>
             </span>
-            <div class="post-description">JS脚本开发小结</div>
+            <div class="post-description">Guava cache</div>
 
         </div>
       </header>
@@ -209,19 +203,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>一般来说有两种脚本，书签栏脚本和油猴脚本</p>
-<h1 id="书签栏脚本"><a href="#书签栏脚本" class="headerlink" title="书签栏脚本"></a>书签栏脚本</h1><p>形式代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">javascript</span>:(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="comment">//your code</span></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<h1 id="油猴脚本"><a href="#油猴脚本" class="headerlink" title="油猴脚本"></a>油猴脚本</h1><p>油猴脚本在新建脚本时会自动生成模板</p>
-<h1 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h1><ol>
-<li>一个简单的按钮添加脚本</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> loop = <span class="built_in">setInterval</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> div = <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&quot;filter-result result-count&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">var</span> html = <span class="string">&#x27;&lt;button type=&quot;button&quot;&gt;&lt;a type=&quot;_blank&quot; id=&quot;testurl&quot; href=&quot;https://www.baidu.com&quot;&gt;tiaozhuan&lt;/a&gt;&lt;/button&gt;&#x27;</span>;</span><br><span class="line">        <span class="comment">//div.insertAdjacentHTML(&#x27;afterbegin&#x27;, html);</span></span><br><span class="line">        <span class="keyword">if</span> (div) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;testurl&#x27;</span>)) &#123;</span><br><span class="line">                div.<span class="title function_">insertAdjacentHTML</span>(<span class="string">&#x27;afterbegin&#x27;</span>, html);</span><br><span class="line">                <span class="built_in">clearInterval</span>(loop);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(div);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>比特球脚本构思<br>磁链上右键选择使用比特球下载-&gt;将磁链放入sessionStorage，跳转页面-&gt;比特球页面，触发下载框弹出，将磁链放入，触发点击下载按钮，删除sessionStorage中的磁链。</li>
-</ol>
+        <h1 id="Guava-Cache简介"><a href="#Guava-Cache简介" class="headerlink" title="Guava Cache简介"></a>Guava Cache简介</h1><p>Guava Cache是Google Guava库中提供的一种本地缓存实现，它提供了一种简单而强大的缓存机制，可以帮助我们更高效地管理缓存数据。Guava Cache可以自动管理缓存中的数据，包括自动加载、过期时间、最大容量等，同时还提供了一些高级特性，如缓存回收策略、缓存统计等。使用Guava Cache可以大大提高应用程序的性能和可伸缩性，特别是在需要频繁访问数据的场景下。</p>
 
     </div>
 
@@ -237,13 +219,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/posts/3789594045/" rel="prev" title="Vim学习记录">
-      <i class="fa fa-chevron-left"></i> Vim学习记录
+    <a href="/posts/4166601289/" rel="prev" title="设计模式2-工厂模式">
+      <i class="fa fa-chevron-left"></i> 设计模式2-工厂模式
     </a></div>
-      <div class="post-nav-item">
-    <a href="/posts/3135679864/" rel="next" title="比特球一键下载 Chrome插件+油猴脚本">
-      比特球一键下载 Chrome插件+油猴脚本 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -302,7 +281,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%A6%E7%AD%BE%E6%A0%8F%E8%84%9A%E6%9C%AC"><span class="nav-number">1.</span> <span class="nav-text">书签栏脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">油猴脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E8%B7%B5"><span class="nav-number">3.</span> <span class="nav-text">实践</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Guava-Cache%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">Guava Cache简介</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
