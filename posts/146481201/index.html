@@ -28,7 +28,7 @@
 <meta property="og:description" content="Guava cache">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-25T01:25:17.000Z">
-<meta property="article:modified_time" content="2023-05-25T01:26:05.727Z">
+<meta property="article:modified_time" content="2023-05-26T02:49:48.876Z">
 <meta property="article:author" content="HanaSaki">
 <meta name="twitter:card" content="summary">
 
@@ -172,10 +172,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-05-25 09:25:17 / 修改时间：09:26:05" itemprop="dateCreated datePublished" datetime="2023-05-25T09:25:17+08:00">2023-05-25</time>
+              <time title="创建时间：2023-05-25 09:25:17" itemprop="dateCreated datePublished" datetime="2023-05-25T09:25:17+08:00">2023-05-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-26 10:49:48" itemprop="dateModified" datetime="2023-05-26T10:49:48+08:00">2023-05-26</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -183,14 +189,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>145</span>
+              <span>793</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>3 分钟</span>
             </span>
             <div class="post-description">Guava cache</div>
 
@@ -204,6 +210,25 @@
 
       
         <h1 id="Guava-Cache简介"><a href="#Guava-Cache简介" class="headerlink" title="Guava Cache简介"></a>Guava Cache简介</h1><p>Guava Cache是Google Guava库中提供的一种本地缓存实现，它提供了一种简单而强大的缓存机制，可以帮助我们更高效地管理缓存数据。Guava Cache可以自动管理缓存中的数据，包括自动加载、过期时间、最大容量等，同时还提供了一些高级特性，如缓存回收策略、缓存统计等。使用Guava Cache可以大大提高应用程序的性能和可伸缩性，特别是在需要频繁访问数据的场景下。</p>
+<h2 id="Guava-Cache-的reload方法"><a href="#Guava-Cache-的reload方法" class="headerlink" title="Guava Cache 的reload方法"></a>Guava Cache 的reload方法</h2><p>Guava Cache的reload方法是在缓存项过期时异步地刷新缓存项的方法。当缓存项过期时，如果有其他线程正在加载该缓存项，则不会触发reload方法。只有当缓存项过期时，且没有其他线程正在加载该缓存项时，才会触发reload方法。</p>
+<p>在Guava Cache中，可以通过调用CacheBuilder的refreshAfterWrite方法来设置缓存项的过期时间，并且在过期后自动调用reload方法刷新缓存项。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Cache&lt;String, String&gt; cache = CacheBuilder.newBuilder()</span><br><span class="line">        .refreshAfterWrite(10, TimeUnit.MINUTES)</span><br><span class="line">        .build(new CacheLoader&lt;String, String&gt;() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public String load(String key) throws Exception &#123;</span><br><span class="line">                // 加载缓存项的逻辑</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            @Override</span><br><span class="line">            public ListenableFuture&lt;String&gt; reload(String key, String oldValue) throws Exception &#123;</span><br><span class="line">                // 异步刷新缓存项的逻辑</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>在上面的例子中，refreshAfterWrite方法设置了缓存项的过期时间为10分钟，并且在缓存项过期后会自动调用CacheLoader的reload方法异步地刷新缓存项。如果在缓存项过期时有其他线程正在加载该缓存项，则不会触发reload方法，直到该缓存项被加载完成并放入缓存中后才会触发reload方法。</p>
+<h2 id="Guava-cache的cache-refresh方法会如何刷新缓存？"><a href="#Guava-cache的cache-refresh方法会如何刷新缓存？" class="headerlink" title="Guava cache的cache.refresh方法会如何刷新缓存？"></a>Guava cache的cache.refresh方法会如何刷新缓存？</h2><p>Guava Cache的cache.refresh方法会异步地刷新指定key的缓存项。具体来说，当调用cache.refresh(key)方法时，Guava Cache会执行以下操作：</p>
+<ol>
+<li><p>如果缓存中已经存在指定key的缓存项，那么将该缓存项标记为“刷新中”。</p>
+</li>
+<li><p>如果缓存中不存在指定key的缓存项，那么调用CacheLoader的load方法加载该缓存项，并将该缓存项标记为“刷新中”。</p>
+</li>
+<li><p>在后台线程中执行CacheLoader的reload方法，异步地刷新指定key的缓存项。</p>
+</li>
+<li><p>如果reload方法执行成功，那么将刷新后的缓存项放入缓存中，并将该缓存项的状态设置为“正常”。</p>
+</li>
+<li><p>如果reload方法执行失败，那么将该缓存项的状态设置为“异常”，并在下一次访问该缓存项时重新加载该缓存项。</p>
+</li>
+</ol>
+<p>需要注意的是，cache.refresh方法只会刷新指定key的缓存项，而不会刷新所有缓存项。如果需要刷新所有缓存项，可以使用Cache.invalidateAll方法。另外，cache.refresh方法是异步执行的，因此在调用该方法后，可能需要等待一段时间才能获取到刷新后的缓存项。如果需要同步地刷新缓存项，可以使用Cache.get方法强制加载缓存项。</p>
 
     </div>
 
@@ -281,7 +306,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Guava-Cache%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">Guava Cache简介</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Guava-Cache%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">Guava Cache简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Guava-Cache-%E7%9A%84reload%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">Guava Cache 的reload方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Guava-cache%E7%9A%84cache-refresh%E6%96%B9%E6%B3%95%E4%BC%9A%E5%A6%82%E4%BD%95%E5%88%B7%E6%96%B0%E7%BC%93%E5%AD%98%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">Guava cache的cache.refresh方法会如何刷新缓存？</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
