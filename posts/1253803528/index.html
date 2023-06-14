@@ -28,7 +28,7 @@
 <meta property="og:description" content="响应式编程">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-14T03:35:32.000Z">
-<meta property="article:modified_time" content="2023-06-14T03:35:57.196Z">
+<meta property="article:modified_time" content="2023-06-14T09:16:35.493Z">
 <meta property="article:author" content="HanaSaki">
 <meta name="twitter:card" content="summary">
 
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-06-14 11:35:32 / 修改时间：11:35:57" itemprop="dateCreated datePublished" datetime="2023-06-14T11:35:32+08:00">2023-06-14</time>
+              <time title="创建时间：2023-06-14 11:35:32 / 修改时间：17:16:35" itemprop="dateCreated datePublished" datetime="2023-06-14T11:35:32+08:00">2023-06-14</time>
             </span>
 
           <br>
@@ -183,14 +183,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>474</span>
+              <span>995</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>4 分钟</span>
             </span>
             <div class="post-description">响应式编程</div>
 
@@ -253,6 +253,19 @@
 <li><code>Mono.doFinally</code>：在<code>Mono</code>流完成时，执行一些操作。</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Mono&lt;String&gt; mono = Mono.just(<span class="string">&quot;Hello, world!&quot;</span>)</span><br><span class="line">        .doFinally(signalType -&gt; System.out.println(<span class="string">&quot;Finally: &quot;</span> + signalType));</span><br></pre></td></tr></table></figure>
+
+<p><code>Mono.defer()</code>是一个用于创建Mono的工厂方法，它的作用是在订阅时动态地创建Mono对象。</p>
+<p>具体来说，<code>Mono.defer()</code>方法接受一个<code>Mono</code>的Supplier函数作为参数，当订阅者订阅Mono时，<code>Mono.defer()</code>方法会调用这个Supplier函数，生成一个新的Mono对象，并将其返回给订阅者。这样，每次订阅Mono时都会创建一个新的Mono对象，从而实现动态创建Mono的效果。</p>
+<p>下面是一个示例代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Mono.defer(() -&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (condition) &#123;</span><br><span class="line">        <span class="keyword">return</span> Mono.just(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> Mono.just(<span class="string">&quot;World&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，<code>Mono.defer()</code>方法接受一个Supplier函数，该函数根据某个条件动态地创建一个Mono对象。当订阅者订阅Mono时，<code>Mono.defer()</code>方法会调用这个Supplier函数，根据条件创建一个新的Mono对象，并将其返回给订阅者。</p>
+<p>需要注意的是，<code>Mono.defer()</code>方法只有在订阅时才会创建Mono对象，因此它可以用于实现一些懒加载的场景，例如根据条件动态地选择不同的数据源等。</p>
+<p><code>Mono.defer()</code>和<code>Mono.just()</code>都是用于创建Mono的工厂方法，它们的区别在于创建Mono对象的时机和方式不同。</p>
+<p><code>Mono.just()</code>方法是在创建Mono对象时就立即生成一个元素，并将其封装为Mono对象返回。这个元素可以是任何对象，例如字符串、数字、集合等。当订阅者订阅Mono时，Mono对象会立即将这个元素发送给订阅者。</p>
+<p>而<code>Mono.defer()</code>方法则是在订阅时动态地创建Mono对象。它接受一个<code>Mono</code>的Supplier函数作为参数，当订阅者订阅Mono时，<code>Mono.defer()</code>方法会调用这个Supplier函数，生成一个新的Mono对象，并将其返回给订阅者。这样，每次订阅Mono时都会创建一个新的Mono对象，从而实现动态创建Mono的效果。</p>
+<p>因此，<code>Mono.just()</code>方法适用于创建固定的、不变的Mono对象，而<code>Mono.defer()</code>方法适用于创建动态的、可变的Mono对象。</p>
+
     </div>
 
     
