@@ -28,7 +28,7 @@
 <meta property="og:description" content="响应式编程">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-14T03:35:32.000Z">
-<meta property="article:modified_time" content="2023-06-14T09:16:35.493Z">
+<meta property="article:modified_time" content="2023-06-19T03:22:00.858Z">
 <meta property="article:author" content="HanaSaki">
 <meta name="twitter:card" content="summary">
 
@@ -172,10 +172,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-06-14 11:35:32 / 修改时间：17:16:35" itemprop="dateCreated datePublished" datetime="2023-06-14T11:35:32+08:00">2023-06-14</time>
+              <time title="创建时间：2023-06-14 11:35:32" itemprop="dateCreated datePublished" datetime="2023-06-14T11:35:32+08:00">2023-06-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-19 11:22:00" itemprop="dateModified" datetime="2023-06-19T11:22:00+08:00">2023-06-19</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -183,14 +189,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>995</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>6 分钟</span>
             </span>
             <div class="post-description">响应式编程</div>
 
@@ -254,7 +260,7 @@
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Mono&lt;String&gt; mono = Mono.just(<span class="string">&quot;Hello, world!&quot;</span>)</span><br><span class="line">        .doFinally(signalType -&gt; System.out.println(<span class="string">&quot;Finally: &quot;</span> + signalType));</span><br></pre></td></tr></table></figure>
 
-<p><code>Mono.defer()</code>是一个用于创建Mono的工厂方法，它的作用是在订阅时动态地创建Mono对象。</p>
+<h2 id="Mono-defer"><a href="#Mono-defer" class="headerlink" title="Mono.defer()"></a>Mono.defer()</h2><p><code>Mono.defer()</code>是一个用于创建Mono的工厂方法，它的作用是在订阅时动态地创建Mono对象。</p>
 <p>具体来说，<code>Mono.defer()</code>方法接受一个<code>Mono</code>的Supplier函数作为参数，当订阅者订阅Mono时，<code>Mono.defer()</code>方法会调用这个Supplier函数，生成一个新的Mono对象，并将其返回给订阅者。这样，每次订阅Mono时都会创建一个新的Mono对象，从而实现动态创建Mono的效果。</p>
 <p>下面是一个示例代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Mono.defer(() -&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (condition) &#123;</span><br><span class="line">        <span class="keyword">return</span> Mono.just(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> Mono.just(<span class="string">&quot;World&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -265,6 +271,22 @@
 <p><code>Mono.just()</code>方法是在创建Mono对象时就立即生成一个元素，并将其封装为Mono对象返回。这个元素可以是任何对象，例如字符串、数字、集合等。当订阅者订阅Mono时，Mono对象会立即将这个元素发送给订阅者。</p>
 <p>而<code>Mono.defer()</code>方法则是在订阅时动态地创建Mono对象。它接受一个<code>Mono</code>的Supplier函数作为参数，当订阅者订阅Mono时，<code>Mono.defer()</code>方法会调用这个Supplier函数，生成一个新的Mono对象，并将其返回给订阅者。这样，每次订阅Mono时都会创建一个新的Mono对象，从而实现动态创建Mono的效果。</p>
 <p>因此，<code>Mono.just()</code>方法适用于创建固定的、不变的Mono对象，而<code>Mono.defer()</code>方法适用于创建动态的、可变的Mono对象。</p>
+<h2 id="Mono-then"><a href="#Mono-then" class="headerlink" title="Mono.then"></a>Mono.then</h2><p><code>Mono.then</code>是用于连接两个<code>Mono</code>对象的操作符，它的作用是在第一个<code>Mono</code>对象完成后，执行第二个<code>Mono</code>对象，并返回第二个<code>Mono</code>对象的结果。</p>
+<p><code>Mono.then</code>方法的参数是一个<code>Mono</code>对象，它表示在第一个<code>Mono</code>对象完成后要执行的操作。<code>Mono.then</code>方法返回的是一个新的<code>Mono</code>对象，它的类型和第二个<code>Mono</code>对象的类型相同。</p>
+<p>示例代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Mono&lt;String&gt; mono1 = Mono.just(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">Mono&lt;String&gt; mono2 = Mono.just(<span class="string">&quot;world&quot;</span>);</span><br><span class="line"></span><br><span class="line">Mono&lt;String&gt; result = mono1.then(mono2);</span><br><span class="line">result.subscribe(System.out::println);</span><br></pre></td></tr></table></figure>
+
+<p>在上面的示例中，<code>Mono.just</code>方法分别创建了两个包含字符串的<code>Mono</code>对象，然后使用<code>then</code>方法连接这两个<code>Mono</code>对象。最终得到的<code>result</code>对象表示在第一个<code>Mono</code>对象完成后，执行第二个<code>Mono</code>对象，并返回第二个<code>Mono</code>对象的结果。在订阅<code>result</code>对象时，会输出字符串”world”。输出结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">world</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，<code>Mono.then</code>方法返回的是一个新的<code>Mono</code>对象，它并不包含第一个<code>Mono</code>对象的结果。如果需要在第二个<code>Mono</code>对象中使用第一个<code>Mono</code>对象的结果，可以使用<code>Mono.flatMap</code>方法。</p>
+<h2 id="Mono-create"><a href="#Mono-create" class="headerlink" title="Mono.create"></a>Mono.create</h2><p><code>Mono.create</code>是用于创建一个自定义的<code>Mono</code>对象的方法，它允许我们手动控制<code>Mono</code>流的生命周期，并在需要时发出元素或错误信号。</p>
+<p><code>Mono.create</code>方法的参数是一个<code>MonoSink</code>对象，它表示一个用于发出元素或错误信号的信号发射器。我们可以在<code>MonoSink</code>对象上调用<code>success</code>方法发出元素信号，调用<code>error</code>方法发出错误信号，或调用<code>complete</code>方法表示<code>Mono</code>流已经完成。</p>
+<p>示例代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Mono&lt;String&gt; mono = Mono.create(sink -&gt; &#123;</span><br><span class="line">    <span class="comment">// 执行一些操作，发出元素或错误信号</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> <span class="string">&quot;Hello, world!&quot;</span>;</span><br><span class="line">    sink.success(result);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>在上面的示例中，<code>Mono.create</code>方法创建了一个自定义的<code>Mono</code>对象，然后在<code>MonoSink</code>对象上调用<code>success</code>方法发出一个字符串元素信号。最终得到的<code>mono</code>对象表示一个包含字符串”Hello, world!”的<code>Mono</code>流。</p>
+<p>需要注意的是，<code>Mono.create</code>方法创建的是一个自定义的<code>Mono</code>对象，我们需要手动控制<code>Mono</code>流的生命周期，并在需要时发出元素或错误信号。因此，在使用<code>Mono.create</code>方法时，需要特别注意控制流的顺序和正确性，以避免出现不可预期的错误。</p>
 
     </div>
 
@@ -342,7 +364,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mono%E7%9A%84%E7%94%A8%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">Mono的用法</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mono%E7%9A%84%E7%94%A8%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">Mono的用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mono-defer"><span class="nav-number">1.1.</span> <span class="nav-text">Mono.defer()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mono-then"><span class="nav-number">1.2.</span> <span class="nav-text">Mono.then</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mono-create"><span class="nav-number">1.3.</span> <span class="nav-text">Mono.create</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
